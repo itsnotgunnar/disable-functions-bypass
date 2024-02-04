@@ -3,7 +3,7 @@ dangerous_functions = array('pcntl_alarm','pcntl_fork','pcntl_waitpid','pcntl_wa
 
 // Loop through dangerous functions and print if it is enabled
 foreach($dangerous_functions as $function) {
-    if (extension_loaded($function) {
+    if (function_exists($function) {
         echo $function . " is enabled";
     }
 }
